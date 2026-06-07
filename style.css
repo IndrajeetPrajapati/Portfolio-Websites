@@ -67,32 +67,6 @@ nav a:focus {
     color: white;
 }
 
-
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    header h1 {
-        margin-bottom: 15px;
-        text-align: center;
-        font-size: 20px;
-    }
-
-    nav {
-        justify-content: center;
-        gap: 10px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 8px 14px;
-    }
-}
-
-
 /* HOME */
 
 #Home {
@@ -175,41 +149,6 @@ nav a:focus {
     background: linear-gradient(135deg, #f59e0b, #ef4444);
 }
 
-
-@media (max-width: 768px) {
-
-    #Home {
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    #Home img {
-        position: static;
-        width: 220px;
-        height: 220px;
-        display: block;
-        margin: 0 auto 30px;
-    }
-
-    #Home h2:first-of-type {
-        font-size: 36px;
-    }
-
-    #Home h2:nth-of-type(2) {
-        font-size: 30px;
-    }
-
-    #Home p {
-        max-width: 100%;
-    }
-
-    .resume-buttons {
-        justify-content: center;
-    }
-}
-
-
-
    /* EDUCATION  */
 
 #Education {
@@ -274,34 +213,7 @@ nav a:focus {
     margin-bottom: 8px;
 }
 
-
-@media (max-width: 768px) {
-
-    #Education {
-        padding: 60px 20px;
-    }
-
-    #Education h2 {
-        font-size: 32px;
-    }
-
-    #Education div {
-        padding: 20px;
-    }
-
-    #Education h3 {
-        font-size: 20px;
-    }
-
-    #Education p {
-        font-size: 14px;
-    }
-}
-
-
-
    /* EXPERIENCE  */
-
 
 #Experience {
     padding: 80px 30px;
@@ -315,7 +227,6 @@ nav a:focus {
     margin-bottom: 50px;
     text-transform: uppercase;
 }
-
 
 #Experience div {
     max-width: 900px;
@@ -357,10 +268,7 @@ nav a:focus {
     margin-bottom: 12px;
 }
 
-
-
    /* SKILLS  */
-
 
 #Skills {
     padding: 80px 30px;
@@ -404,9 +312,7 @@ nav a:focus {
     box-shadow:0 10px 25px rgba(37,99,235,0.4);
 }
 
-
 /*  PROJECTS SECTION  */
-
 
  #Projects {
     padding: 80px 30px;
@@ -435,7 +341,8 @@ nav a:focus {
 
 
 .Project-card {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255,255,255,0.2);
@@ -515,24 +422,6 @@ nav a:focus {
 .Project-card a:hover {
     transform: scale(1.08);
 }
-
-
-@media(max-width:768px){
-
-    #Projects h2{
-        font-size:32px;
-    }
-
-    .Project-card{
-        width:100%;
-    }
-
-    .Project-card h3{
-        font-size:22px;
-    }
-}
-
-
 
 /*  CONTACT  */
 
@@ -620,52 +509,20 @@ nav a:focus {
 
 #Contact button {
     width: 100%;
-
     padding: 15px;
-
     border: none;
-
     border-radius: 50px;
-
-    background: linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
-
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
     color: white;
-
     font-size: 16px;
-
     font-weight: bold;
-
     cursor: pointer;
-
     transition: 0.3s ease;
 }
 
 #Contact button:hover {
     transform: translateY(-3px);
-
-    box-shadow:
-        0 10px 25px rgba(37,99,235,0.4);
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    #Contact {
-        padding: 60px 20px;
-    }
-
-    #Contact h2 {
-        font-size: 32px;
-    }
-
-    #Contact form {
-        padding: 25px;
-    }
+    box-shadow: 0 10px 25px rgba(37,99,235,0.4);
 }
 
 
@@ -711,4 +568,137 @@ footer p {
 #backToTop:hover {
     transform: translateY(-5px);
     box-shadow:0 12px 30px rgba(37,99,235,0.6);
+}
+
+
+
+/* ==========================
+   Tablet (768px and below)
+========================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    #Home {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    #Home img {
+        position: static;
+        width: 250px;
+        height: 250px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    #Home h2:first-of-type {
+        font-size: 40px;
+    }
+
+    #Home > p:first-of-type {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .Project-card {
+        width: 100%;
+    }
+}
+
+
+/* ==========================
+   Mobile (480px and below)
+========================== */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    #Home {
+        padding: 30px 15px;
+    }
+
+    #Home img {
+        width: 180px;
+        height: 180px;
+    }
+
+    #Home h2:first-of-type {
+        font-size: 28px;
+    }
+
+    #Home h2:nth-of-type(2) {
+        font-size: 28px;
+    }
+
+    #Home p {
+        font-size: 15px;
+    }
+
+    .resume-buttons {
+        justify-content: center;
+    }
+
+    .resume-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    #Education h2,
+    #Experience h2,
+    #Skills h2,
+    #Projects h2,
+    #Contact h2 {
+        font-size: 30px;
+    }
+
+    #Education div,
+    #Experience div,
+    .Project-card {
+        padding: 20px;
+    }
+
+    .Project-card h3 {
+        font-size: 22px;
+    }
+
+    #Contact form {
+        padding: 20px;
+    }
+
+    #backToTop {
+        width: 45px;
+        height: 45px;
+        font-size: 12px;
+    }
 }
