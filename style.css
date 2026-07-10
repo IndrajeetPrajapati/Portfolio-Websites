@@ -312,6 +312,56 @@ nav a:focus {
     box-shadow:0 10px 25px rgba(37,99,235,0.4);
 }
 
+/* Certificates */
+
+#Certificates {
+    text-align:center;
+    padding:80px 30px;
+    background:linear-gradient(135deg,#1e293b,#334155);
+}
+
+#Certificates h2 {
+    color:white;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.Certificate-container {
+    width:100%;
+    margin:0 auto;
+    max-width:900px;
+}
+
+.Certificate-card {
+    padding:25px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    margin-bottom:35px;
+    transition:.3s;
+}
+
+.Certificate-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(59,130,246,.35);
+}
+
+.Certificate-card img {
+    width:100%;
+    max-width:700px;
+    border-radius:10px;
+}
+
+.Certificate-card h3 {
+    color:white;
+    margin-top:20px;
+    font-size:24px;
+}
+
+
+
+
 /*  PROJECTS SECTION  */
 
  #Projects {
@@ -610,7 +660,7 @@ footer p {
         font-size: 40px;
     }
 
-    #Home > p:first-of-type {
+    #Home p:first-of-type {
         font-size: 18px;
         margin-bottom: 30px;
     }
@@ -677,6 +727,7 @@ footer p {
     #Education h2,
     #Experience h2,
     #Skills h2,
+    #Certificates h2,
     #Projects h2,
     #Contact h2 {
         font-size: 30px;
